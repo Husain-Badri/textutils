@@ -25,8 +25,8 @@ export default function TextForms(props) {
                 <h1>{props.heading}</h1>
                 <div className="mb-3 mt-5">
                     <textarea placeholder='Enter Text Here...' value={text} onChange={handlemyBoxTextChange} className="form-control mb-3" id="myBox" rows="8"></textarea>
-                    <button className='btn btn-primary mx-2' onClick={handleUpClick} >Convert To Uppercase</button>
-                    <button className='btn btn-info' onClick={handleLcClick} >Convert To Lowercase</button>
+                    <button disabled={text.length === 0} className='btn btn-primary mx-2' onClick={handleUpClick} >Convert To Uppercase</button>
+                    <button disabled={text.length === 0} className='btn btn-info' onClick={handleLcClick} >Convert To Lowercase</button>
                 </div>
             </div>
             <div className='container my-4'>
